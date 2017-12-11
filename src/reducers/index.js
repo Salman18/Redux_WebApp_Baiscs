@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';S
+import { combineReducers } from 'redux';
 import TextReducer from './reducer';
 
 const rootReducer = combineReducers({
