@@ -6,28 +6,27 @@ import { bindActionCreators } from 'redux';
 class TextReducer extends Component {
     
     render() {
-        
-                if (!this.props.text) {
+              if (!this.props.text) {
                     return <div>Nothing</div>
                 }
               return (
                   <div>
                       <h3>Hi</h3>
-                      <div>Title: {this.props.text}</div>
+                      <div>Name: {this.props.text}</div>
                   </div>
               );       
             }
         }
 
 function mapStateToProps (state) {
-    //Whatever returned from here will show as props inside BookList
+    //Whatever returned from here will show as props inside TextReducer
      return {
-        text: state.simples
+        text: state.simple
      };
    }
-// Anything returned from this function will end up as props on the Booklist container 
+// Anything returned from this function will end up as props on the TextReducer container 
    function mapDispatchToProps(dispatch) {
-//Whenever selectBook is called ,the result should be passed to all of our reducers
+//Whenever selectText is called ,the result should be passed to all of our reducers
      return bindActionCreators( selectText, dispatch);
    }
 
